@@ -1,0 +1,125 @@
+body{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	background: url(../images/background.jpg) no-repeat;
+	background-size: cover;
+	font-family: 'Microsoft YaHei', "SimHei";
+	position: relative;
+}
+a,ul,li{
+	list-style:none;
+	text-decoration: none; 
+}
+html{
+	min-width: 1200px;
+	height: 100%;
+	overflow-x:auto;
+	overflow-y:auto;
+}
+#bodyer{
+	width: auto;
+	text-align: center;
+	margin-top: 100px;
+}
+.msg{
+	display: inline-block;
+	width: 600px;
+	height: auto;
+	vertical-align: top;
+	margin-top: 40px;
+}
+h1,h5{
+	margin: 0;
+	color: #FFFFFF;
+	text-align: justify;
+}
+h1{
+	font-size: 50px;
+	margin-top: 80px;
+}
+h5{
+	font-size: 14px;
+	margin: 40px 0 0 60px;
+}
+.form{
+	display: inline-block;
+	background: rgba(0,0,0,.4);
+	width: 320px;
+	height: 430px;
+	border-radius: 5px;
+	margin-left: 50px;
+}
+.log{
+	padding: 25px 40px;
+}
+.title,.userTxt,.user_error,.email_error{
+	display: block;
+	text-align: left;
+	color: #FFFFFF;
+	margin-top: 10px;
+}
+.title{
+	margin-top: 0;
+}
+.log img{
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	margin-left: 60px;
+}
+.userTxt{
+	font-size: 12px;
+	color: #D8D8D8;
+}
+.form-group{
+	margin-bottom: 2px;
+	margin-top: 10px;
+}
+.user_error,.email_error{
+	text-align: right;
+	color: #FD9999;
+	font-size: 12px;
+	display: none;
+}
+input{
+	width: 230px;
+	height: 40px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	padding-left: 10px;
+	margin: 10px auto 0px;
+}
+select{
+	width: 240px;
+	height: 40px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	padding-left: 10px;
+	margin: 10px auto 0px;
+	color: #666666;
+}
+.btn{
+	display: block;
+	width: 180px;
+	height: 32px;
+	background: #F57E57;
+	margin-top: 30px;
+	border-radius: 20px;
+	color: #FFFFFF;
+	padding-top: 8px;
+	cursor: pointer;
+	-webkit-transition: background .5s;
+	-o-transition: background .5s;
+	transition: background .5s;
+	font-size: 15px;
+	font-weight: bold;
+}
+.btn:hover{
+	background: #55BBEB;
+	-webkit-transition: background .5s;
+	-o-transition: background .5s;
+	transition: background .5s;
+}

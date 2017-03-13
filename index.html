@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+	<title>牙医</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div id="bodyer">
+		<div class="msg">
+			<h1>虎牙后台管理系统</h1>
+			<h5>技术支持：秦皇岛锐基网络工程有限公司</h5>
+		</div>
+		<div class="form">
+			<form name="log" class="log" autocomplete="off" method="post">
+				<span class="title">虎牙后台管理系统<img src="images/logo.png"></span>
+				<div class="form-group g_userName">
+					<label class="userTxt">Name</label>
+					<input type="text" id="userName" placeholder="请输入您的用户名"/>
+					<label class="user_error">用户名错误!</label>
+				</div>
+				<div class="form-group g_pass">
+					<label class="userTxt">E-mail</label>
+					<input type="text" id="emailName" placeholder="请输入您的邮箱"/>
+					<label class="email_error">邮箱格式错误!</label>
+				</div>
+				<div>
+					<label class="userTxt">Doctor</label>
+					<select>
+						<option value="Doctor">Doctor</option>
+						<option value="Nurse">Nurse</option>
+					</select>
+				</div>
+				<div>
+                    <input id="jump" type="hidden" name="jump" value="">
+                    <a id="enter" class="btn" href="admin.html">登录 | Login</a>
+                </div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
