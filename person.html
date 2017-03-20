@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/person.css">
+</head>
+<!-- **********************************body*********************************** -->
+
+<body>
+    <div class="header">
+        <img src="images/logo.png" alt="logo" class="logoImg">
+        <h4 class="title">虎牙后台管理系统</h4>
+        <img src="images/admin.png" class="adminImg">
+        <h4>欢迎你：</h4><span>马里奥大叔</span>
+    </div>
+    <div class="nav">
+        <ul>
+            <li class="userManage">
+                <a href=""><img src="images/UM.png">用户管理</a>
+                <!-- 多级列表 -->
+                <ul>
+                    <li><a href="">审核</a></li>
+                    <li><a href="">查询</a></li>
+                </ul>
+            </li>
+            <li class="doctorManage">
+                <a href=""><img src="images/DM.png">牙医管理</a>
+            </li>
+            <li class="complain">
+                <a href=""><img src="images/CL.png">投诉建议处理</a>
+            </li>
+            <li class="service">
+                <a href=""><img src="images/SV.png">服务协议处理</a>
+            </li>
+            <li class="message">
+                <a href=""><img src="images/MG.png">消息推送</a>
+            </li>
+             <li class="portraitNav">
+                <a href=""><img src="images/MG.png">个人履历</a>
+            </li>
+        </ul>
+    </div>
+    <div class="form">
+	    <!-- 个人履历************************************************* -->
+	    <div class="person">
+	        <span>个人履历</span>
+	        <table cellspacing="0">
+	            <tr>
+	                <th>时间</th>
+	                <th>医院</th>
+	                <th>职位</th>
+	            </tr>
+	            <tr>
+	                <td>大概三五年吧</td>
+	                <td>四平精神病院</td>
+	                <td>精神病领袖</td>
+	            </tr>
+	            <tr>
+	                <td>大概三五年吧</td>
+	                <td>四平精神病院</td>
+	                <td>精神病领袖</td>
+	            </tr>
+	        </table>
+	        <span>儿童诊治经验</span>
+	        <table cellspacing="0">
+	            <tr>
+	                <th>时间</th>
+	                <th>工作单位</th>
+	            </tr>
+	            <tr>
+	                <td>大概三五年吧</td>
+	                <td>四平精神病院</td>
+	            </tr>
+	            <tr>
+	                <td>大概三五年吧</td>
+	                <td>四平精神病院</td>
+	            </tr>
+	        </table>
+	        <table cellspacing="0">
+	            <tr>
+	                <th>姓名</th>
+	                <th>邮箱</th>
+	                <th>生日</th>
+	            </tr>
+	            <tr>
+	                <td>杨永信</td>
+	                <td>1235243@12.com</td>
+	                <td>2017.3.20</td>
+	            </tr>
+	            <tr>
+	                <th>手机号</th>
+	                <th>地址</th>
+	                <th>头像</th>
+	            </tr>
+	            <tr>
+	                <td>123124256</td>
+	                <td>不知道在哪</td>
+	                <td class="portrait"><img src="images/admin.png"></td>
+	            </tr>
+	            <tr>
+	                <th></th>
+	                <th>资质</th>
+	                <th></th>
+	            </tr>
+	            <tr>
+	                <td><img src="images/logo.png"></td>
+	                <td><img src="images/logo.png"></td>
+	                <td><img src="images/logo.png"></td>
+	            </tr>
+	        </table>
+	        <table cellspacing="0">
+	            <tr>
+	                <th>是否通过审核
+	                    <input type="button" value="同意"></input>
+	                </th>
+	            </tr>
+	        </table>
+	    </div>
+    </div>
+    <!-- footer******************************************************************** -->
+    <div class="footer">
+        <span>@技术支持：秦皇岛锐基网络工程有限公司</span>
+    </div>
+    <!-- **********************************script*********************************** -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        // param
+        var img = $('table').find('img');
+        var arr = [],
+            data;
+        var portraitNav = $('.portraitNav');
+        // 个人履历页放大图片插入模板
+ 		function showImg(data) {
+            var temp = ("<div id='temp'>" +
+                "<div class='mask'></div>" +
+                "<div class='imgTemp'>" +
+                "<img src='" + data + "'>" +
+                "<span class='exit'></span>" +
+                "</div>" +
+                "</div>");
+            var exitBtn;
+            var onclick = function(e) {
+                $('body').prepend(temp);
+                exitBtn = $('.exit');
+		        exitBtn.on('click',function () {
+		        	$('#temp').remove();
+		        })
+            }
+            return onclick;
+        }
+        // 遍历图片 闭包
+        for (var i = 0; i < img.length; i++) {
+            arr.push(img[i]);
+            data = arr[i].src;
+            img[i].onclick = showImg(data);
+        }
+    })
+    </script>
+</body>
+
+</html>

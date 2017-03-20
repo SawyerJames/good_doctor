@@ -1,0 +1,220 @@
+/*---------------------------------------通用*/
+body{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: auto;
+	font-family: 'Microsoft YaHei', "SimHei";
+}
+a,ul,li{
+	list-style:none;
+	text-decoration: none;
+	padding:0;
+	margin: 0;
+}
+html{
+	min-width: 1200px;
+	height: 100%;
+	overflow-x:auto;
+	overflow-y:auto;
+	position: relative;
+}
+/*---------------------------------------头部*/
+.header{
+	position: absolute;
+	width: 100%;
+	height: 8%;
+	background: #55BBEB;
+	color: #FFFFFF;
+}
+.header .logoImg,.header h4,.header span{
+	display: inline-block;
+	margin: 0;
+	top: 15px;
+	position: absolute;
+	font-size: 14px;
+}
+.header .logoImg{
+	width: 40px;
+	height: 40px;
+	left: 20px;
+	top: 5px;
+}
+.header h4{
+	right:100px;
+}
+.header .title{
+	font-size: 20px;
+	top: 10px;
+	left: 80px;
+}
+.header span{
+	right: 30px;
+	color: #000000;
+	border-bottom: 2px solid #FFFFFF;
+}
+.header .adminImg{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: 170px;
+	top: 10px;
+}
+/*---------------------------------------左侧导航*/
+.nav{
+	font-size: 14px;
+	position: absolute;
+	top: 8%;
+	display: inline-block;
+	width: 11%;
+	height: 92%;
+	background: #333333;
+	color: #FFFFFF;
+}
+.nav li img{
+	width: 20px;
+	height: 20px;
+	vertical-align: top;
+	margin: 12px 12px 0 0;
+}
+.nav li a{
+	display: block;
+	text-align: left;
+	width: 90%;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 10%;
+	border-bottom: 1px solid #7E7E7E;
+	color: #FFFFFF;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+.nav li a:hover{
+	background: #909090;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+/*---------------------------------------左侧导航(多级菜单)*/
+.nav .userManage ul{
+	display: none;
+}
+.nav .userManage ul li a{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.nav .userManage ul li a:hover{
+	background: #F57E57;
+}
+/*---------------------------------------右侧表单*/
+.form{
+	position: absolute;
+	top: 8%;
+	left: 11%;
+	display: inline-block;
+	width: 89%;
+	height: 88%;
+	vertical-align: top;
+	overflow: auto;
+	background: #F7F7F7;
+}
+/*---------------------------------------底部*/
+.footer{
+	width: 100%;
+	height: 4%;
+	position: absolute;
+	text-align: right;
+	bottom: 0;
+}
+.footer span{
+	color: #000000;
+	font-size: 12px;
+	padding-right: 20px;
+}
+
+/* *******************  个人履历页 css ******************************  */
+.person{
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	background:#F7F7F7;
+}
+.person span{
+	display: block;
+	font-size: 18px;
+	padding: 20px 0;
+}
+.person table{
+	width: 88%; 
+	padding: 0; 
+	margin: 0 auto; 
+	background:#AD9494;
+	margin-bottom: 20px;
+}
+.person th{
+	font: bold 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+	color: #2C2C2C; 
+	border-right: 1px solid #C1DAD7; 
+	border-bottom: 1px solid #C1DAD7; 
+	border-top: 1px solid #C1DAD7; 
+	letter-spacing: 2px; 
+	text-transform: uppercase; 
+	text-align: center; 
+	padding: 6px 6px 6px 12px; 
+	background: #EDEDED no-repeat; 
+}
+.person td{
+	border-right: 1px solid #C1DAD7; 
+	border-bottom: 1px solid #C1DAD7; 
+	background: #fff; 
+	font-size:14px; 
+	padding: 6px 6px 6px 12px; 
+	color: #4f6b72; 
+}
+.person td img{
+	width: 100px;
+	height: 100px;
+}
+.person .portrait img{
+	width: 50px;
+	height: 50px;
+}
+.person input[type="button"]{
+	margin-left: 30px;
+}
+.mask{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.6);
+	z-index: 10;
+}
+#temp{
+	display: block;
+}
+.imgTemp{
+	position: fixed;
+	width: 800px;
+	height: auto;
+	border: 1px dashed #FFFFFF;
+	top: 10%;
+	left: 20%;
+	z-index: 10;
+	text-align: center;
+}
+.imgTemp img{
+	margin: 100px auto;
+}
+.imgTemp span{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border:2px solid #FFFFFF;
+	border-radius: 50px;
+	right: 10px;
+	top: 10px;
+	background: url(../images/exit.png);
+}
